@@ -1,16 +1,17 @@
 $(document).ready(function(){
+    console.log("READY!");
     let city = $("#city");
 
     //USER ENTERS CITY AND PRESSES BUTTON:
     $("#getInfo").click(function(){
-        city = $("#city").val();
+        zip = $("#city").val();
         displayInformation();
     });
 
     function displayInformation() {
         const apiKey = "&APPID=940bd19264df2f0bdcef88196b007f5f";
-        const queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
-
+        const queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + apiKey;
+        
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -36,14 +37,17 @@ $(document).ready(function(){
                     console.log(queryTwo);
                     console.log(services);
                     display();
+                    let pubServ = services[i];
+                    console.log(pubServ);
+                    console.log(pubServ[3].service_name)
                 })
-                 
+
                 function display(services) {
                 $("#infoView").empty();
                 const displayResults = [];
                 
-                    for(i = 0; i < services.length; i++) {
-                        displayResults.push(createNewDisplay(services.services[i]));
+                    for(i = 0; i < services[i].length; i++) {
+                        displayResults.push(createNewDisplay(services[i]));
                     }
                     $("#infoView").append(displayResults);
                 }
@@ -53,8 +57,8 @@ $(document).ready(function(){
                     const org = $("<h5>");
                     const servName = $("<p>");
 
-                    org.text(services.services.organization);
-                    servName.text(services.servives.service_name);
+                    org.text(pubServ.organization);
+                    servName.text(pubServ.service_name);
 
                     $(newCol).append(org);
                     $(org).append(servName);

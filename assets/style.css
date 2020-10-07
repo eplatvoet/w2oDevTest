@@ -1,0 +1,16 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    background-color: honeydew;
+}
+
+.jumbotron{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    color: green;
+    background-color: honeydew;
+}
+
+.white{
+    background-color: white;
+}
