@@ -12,22 +12,26 @@
 </head>
 <body>
 <center>
-    <div class="jumbotron"><h1>Public Services</h1></div>
+    <div class="jumbotron">
+        <h1>Public Services</h1> <br>
+        <div id="currentTime"></div>
+    </div>
     <div class="row">
         <div class="col-xs-3">
-            Enter city below to see what public services are offered.<br>
+            Enter city below to see what public services are offered
+            <br><br>
             <input id="city" placeholder="Enter City Name:"></input>
-            <br>
+            <br><br>
             <button id="getInfo">Get Information</button>
         </div>
        <div class="col-xs-7">
            <!-- RESULTS WILL APPEAR HERE -->
-           <div class="row">
-               <span class="time"></span>
-               <span class="temp"></span>
-
+           <div class="row"> 
+               <div class="location"></div><br>
+               <div class="weather"></div><br>
+               <div class="coordinates"></div>
            </div>
-           <div class="row">
+           <div class="row" id="infoView">
                  <!--CARDS APPEAR HERE  -->
            </div>
        </div>
@@ -35,7 +39,6 @@
 </center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="assets/script.js"></script>
