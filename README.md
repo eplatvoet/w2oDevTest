@@ -11,18 +11,21 @@
 - [LINKS](#LINKS)  
 - [SCREENSHOTS](#SCREENSHOTS)  
 
-## DESCRIPTION
+## DESCRIPTION  
+For the Developer Test, I chose prolem #5:
 ```````````````
-Create an interesting display of public services available by zip code, city, and/or street address using http://seeclickfix.com/open311/v2/docs. Assume that most users would not know their town’s latitude and longitude; so, some additional look-ups would be required.
+Create an interesting display of public services available by zip code,  
+city, and/or street address using http://seeclickfix.com/open311/v2/docs.  
+Assume that most users would not know their town’s latitude and longitude;  
+so, some additional look-ups would be required.
 ```````````````
-
-
+To achieve this solution, I began by creating a simple HTML document with a few elements (jumbotron, rows, columns). Then, I utlized the OpenWeatherMap API to grab the lat/lon of a zip code (and also provide the user with current weather conditions of that zipcode), and then sent the lat/lon through the SeeClickFix API.  
 
 ## LICENSE
 NONE
 
 ## INSTALLATION
-Install info goes here...
+No installation required when cloning repository.
 
 ## TECHNOLOGIES
 - HTML  
