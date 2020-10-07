@@ -32,14 +32,34 @@ $(document).ready(function(){
                     url: queryTwo,
                     method: "GET"
                 })
-                .then(function (responseTwo){
+                .then(function (services){
                     console.log(queryTwo);
-                    console.log(responseTwo);
-                    // $("#infoView").empty();
-                    // const displayResults = [];
-                    
-                    // for(i = 0; i < responseTwo.length; i++)
+                    console.log(services);
+                    display();
                 })
+                 
+                function display(services) {
+                $("#infoView").empty();
+                const displayResults = [];
+                
+                    for(i = 0; i < services.length; i++) {
+                        displayResults.push(createNewDisplay(services.services[i]));
+                    }
+                    $("#infoView").append(displayResults);
+                }
+
+                function createNewDisplay(services) {
+                    const newCol = $("<div class ='col-xs-3'>");
+                    const org = $("<h5>");
+                    const servName = $("<p>");
+
+                    org.text(services.services.organization);
+                    servName.text(services.servives.service_name);
+
+                    $(newCol).append(org);
+                    $(org).append(servName);
+                    return newCol;
+            }
             });
     };
 
