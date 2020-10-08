@@ -21,7 +21,7 @@ $(document).ready(function(){
           console.log(queryURL);
           console.log(response);
     
-          $(".location").html("<h3>Currently in " + response.name + "</h3><br>");
+          $(".location").html("<h3>" + response.name + "</h3><br>");
           $(".weather").html(
             "Current conditions: " +
               response.weather[0].description +
@@ -50,30 +50,32 @@ $(document).ready(function(){
             method: "GET",
           }).then(function (services) {
             display(services);
+            console.log(queryTwo);
             console.log(services);
           });
         })
-    }
+    };
     function display(services) {
         $("#infoView").empty();
-        const displayResults = {};
+        const displayResults = [];
 
-        for (i = 0; i < services[i].length; i++) {
+        for (i = 0; i < displayResults.length; i++) {
           displayResults.push(createNewDisplay(services[i]));
+          console.log("Create new display");
         }
         $("#infoView").append(displayResults);
-      }
+      };
 
       function createNewDisplay(services) {
         const newCol = $("<div class ='col-xs-3'>");
         const org = $("<h5>");
         const servName = $("<p>");
 
-        org.text(services.organization);
-        servName.text(services.service_name);
+        org.text(services[i].organization);
+        servName.text(services[i].service_name);
 
         $(newCol).append(org);
         $(org).append(servName);
         return newCol;
-      }
+      };
 })
