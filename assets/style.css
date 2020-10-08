@@ -1,16 +1,30 @@
-body{
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    background-color: honeydew;
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  background-color: #DEF4F8;
 }
 
-.jumbotron{
-    font-family: 'Abril Fatface', cursive;
-    font-size: 100px;
-    color: green;
-    background-color: honeydew;
+.jumbotron {
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  color: #05A0BC;
+  background-color: white;
+  background-image: url("https://seeclickfix.com/assets/marketing_homepage/marketing/home-phone-cityscape-a2886df88a9685a985dcdb5c29b7620a64462096c1dd5d2402524a6897a76056.png");
+  background-repeat: no-repeat;
+  background-size: 20%;
 }
 
-.white{
-    background-color: white;
+.white {
+  background-color: white;
 }
+
+.title {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+#servicesOffered {
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+  }
+
