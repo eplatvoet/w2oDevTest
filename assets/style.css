@@ -1,13 +1,13 @@
 body {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
-  background-color: #DEF4F8;
+  background-color: #d7f4fc;
 }
 
 .jumbotron {
   font-family: "Abril Fatface", cursive;
   font-size: 100px;
-  color: #05A0BC;
+  color: #009ac9;
   background-color: white;
   background-image: url("https://seeclickfix.com/assets/marketing_homepage/marketing/home-phone-cityscape-a2886df88a9685a985dcdb5c29b7620a64462096c1dd5d2402524a6897a76056.png");
   background-repeat: no-repeat;
