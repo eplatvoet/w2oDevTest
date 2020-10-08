@@ -11,16 +11,18 @@
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@200&display=swap" rel="stylesheet">
 
-<title>Erin's Web Dev Test</title>
+<title>E Platvoet Web Dev Test</title>
 </head>
 
 <body>
-<center>
+    
+    <center>
     <div class="jumbotron">
         Public Services <br>
         <div id="currentTime"></div>
     </div>
     <div class="row">
+        <div class="col-xs-1"></div>
         <div class="col-xs-3 white">
             Enter zip code below to see what public services are offered in that area.
             <br><br>
@@ -30,17 +32,20 @@
         </div>
        <div class="col-xs-7 white">
            <!-- RESULTS WILL APPEAR HERE -->
-           <div class="row"> 
-               <div class="location"></div>
-               <div class="weather"></div>
+           <div class="row">
+               <span class="title">Search Results:</span>
+               <div class="location title"></div>
                <div class="coordinates"></div>
+               <div class="weather"></div>
            </div><br>
+           <div class="row" id="servicesOffered">Public Services offered:</div>
            <div class="row white" id="infoView">
-                 <!--CARDS APPEAR HERE  -->
+                 <!--SERVICES APPEAR HERE  -->
            </div><br>
            <div class="row">For more information, please visit <a href="https://seeclickfix.com/">SeeClickFix</a>.</div>
        </div>
     </div>
+    <footer>Erin Platvoet - 2020</footer>
 </center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
