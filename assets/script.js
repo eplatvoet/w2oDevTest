@@ -57,25 +57,37 @@ $(document).ready(function(){
     };
     function display(services) {
         $("#infoView").empty();
-        const displayResults = [];
+        let mappedResults = services.map(service => {
+            let newObj = {
+                organization: service.organization,
+                service_name: service.service_name
+            }
+            console.log(newObj);
+            return newObj;
+            
+        })
 
-        for (i = 0; i < displayResults.length; i++) {
-          displayResults.push(createNewDisplay(services[i]));
-          console.log("Create new display");
-        }
-        $("#infoView").append(displayResults);
-      };
+        // const displayResults = [];
 
-      function createNewDisplay(services) {
+        // for (i = 0; i < displayResults.length; i++) {
+        //   displayResults.push(createNewDisplay(services[i]));
+        //   console.log("Create new display");
+        // }
+        $("#infoView").append(mappedResults);
         const newCol = $("<div class ='col-xs-3'>");
         const org = $("<h5>");
         const servName = $("<p>");
 
-        org.text(services[i].organization);
-        servName.text(services[i].service_name);
+        org.text(newObj.organization);
+        servName.text(newObj.service_name);
 
         $(newCol).append(org);
         $(org).append(servName);
         return newCol;
+        // createNewDisplay();
       };
+
+    //   function createNewDisplay(services) {
+        
+    //   };
 })
