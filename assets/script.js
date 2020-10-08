@@ -48,6 +48,8 @@ $(document).ready(function(){
           $.ajax({
             url: queryTwo,
             method: "GET",
+            dataType:'jsonp',
+            crossDomain: true,
           }).then(function (services) {
             display(services);
             console.log(queryTwo);
@@ -64,19 +66,11 @@ $(document).ready(function(){
             }
             console.log(newObj);
             return newObj;
-            
-        })
-
-        // const displayResults = [];
-
-        // for (i = 0; i < displayResults.length; i++) {
-        //   displayResults.push(createNewDisplay(services[i]));
-        //   console.log("Create new display");
-        // }
+        });
         $("#infoView").append(mappedResults);
-        const newCol = $("<div class ='col-xs-3'>");
-        const org = $("<h5>");
-        const servName = $("<p>");
+        let newCol = $("<div class ='col-xs-3'>");
+        let org = $("<h5>");
+        let servName = $("<p>");
 
         org.text(newObj.organization);
         servName.text(newObj.service_name);
@@ -84,10 +78,5 @@ $(document).ready(function(){
         $(newCol).append(org);
         $(org).append(servName);
         return newCol;
-        // createNewDisplay();
       };
-
-    //   function createNewDisplay(services) {
-        
-    //   };
 })

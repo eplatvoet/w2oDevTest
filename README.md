@@ -25,7 +25,7 @@ To achieve this solution, I began by creating a simple HTML document with a few 
 NONE
 
 ## INSTALLATION
-No installation required when cloning repository.
+No installations required when cloning the repository.  
 
 ## TECHNOLOGIES
 - HTML  
