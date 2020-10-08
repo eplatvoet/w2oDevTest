@@ -65,9 +65,7 @@ $(document).ready(function(){
                 service_name: service.service_name
             }
             console.log(newObj);
-            return newObj;
-        });
-        $("#infoView").append(mappedResults);
+           
         let newCol = $("<div class ='col-xs-3'>");
         let org = $("<h5>");
         let servName = $("<p>");
@@ -78,5 +76,7 @@ $(document).ready(function(){
         $(newCol).append(org);
         $(org).append(servName);
         return newCol;
+        });
+        $("#infoView").append(mappedResults);
       };
 })
